@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔐 Secure Access</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="center">
+  <h1 class="glow">🔒 Enter Your PIN</h1>
+  <input type="password" maxlength="4" id="pin" class="input-pin" />
+  <button onclick="steal()" class="btn">Unlock</button>
+
+  <script>
+    function steal() {
+      const pin = document.getElementById("pin").value;
+      sessionStorage.setItem("stolenPIN", pin);
+      window.location.href = "hacked.html";
+    }
+  </script>
+</body>
+</html>
